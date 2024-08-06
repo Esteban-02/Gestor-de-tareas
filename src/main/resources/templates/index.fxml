@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="gm.tareas.controlador.IndexControlador"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controlador.IndexControlador">
+   <children>
+      <Label layoutX="186.0" layoutY="46.0" text="Sistemas de tareas" textFill="#30541a">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font></Label>
+      <TableView fx:id="tareaTabla" layoutX="254.0" layoutY="100.0" prefHeight="200.0" prefWidth="318.0">
+        <columns>
+          <TableColumn fx:id="idTareaColumna" prefWidth="54.60005187988281" text="ID" />
+          <TableColumn fx:id="tareaColumna" prefWidth="106.20001220703125" text="Tarea" />
+            <TableColumn fx:id="responsableColumna" prefWidth="89.79998779296875" text="Responsable" />
+            <TableColumn fx:id="statusColumna" prefWidth="65.60001220703123" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Tarea" textFill="#2d6cb9">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="70.0" text="Responsable" textFill="#2d6cb9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="16.0" layoutY="126.0" text="Estatus" textFill="#2d6cb9">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="nombreTareaTexto" layoutX="15.0" layoutY="32.0" />
+            <TextField fx:id="responsableTexto" layoutX="16.0" layoutY="88.0" />
+            <TextField fx:id="estatusTexto" layoutX="16.0" layoutY="144.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="320.0" prefHeight="96.0" prefWidth="570.0">
+         <children>
+            <Button fx:id="agregatBoton" layoutX="39.0" layoutY="14.0" mnemonicParsing="false" onAction="#agregarTarea" style="-fx-background-color: #1d3557;" text="Agregar" textFill="#f1faee" />
+            <Button fx:id="modificarBoton" layoutX="150.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #1d3557;" text="Modificar" textFill="#f1faee" />
+            <Button fx:id="eliminarBoton" layoutX="275.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #1d3557;" text="Eliminar" textFill="#f1faee" />
+            <Button fx:id="limpiarBoton" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #1d3557;" text="Limpiar Forma" textFill="#f1faee" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
