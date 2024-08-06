@@ -16,17 +16,6 @@ public class SistemaTareasFx extends Application {
 
     private ConfigurableApplicationContext applicationContext;
 
-
-    /**public static void main(String[] args) {
-        launch(args);
-    }**/
-
-    /**
-     * Inicia la aplicacion de javaFX
-     * @param primaryStage
-     */
-
-
     /**
      * Inicia la ejecucion de Spring con el metodo RUN de la clase APPLICATION, donde inicializa la clase principal
      * haciendo un llamado a esta clase e iniciando con este metodo al metodo de Spring con el <b>new SpringAplicationbuilde(TareasAplication.class)</b>

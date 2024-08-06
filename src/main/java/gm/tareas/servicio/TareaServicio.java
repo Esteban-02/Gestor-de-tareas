@@ -9,6 +9,9 @@ import java.util.List;
 @Service
 public class TareaServicio implements ITareaServicio{
 
+    /**
+     * Inyeccion de la de dependencias del servicio del repositorio
+     */
     @Autowired
     private TareaRepositorio tareaRepositorio;
 

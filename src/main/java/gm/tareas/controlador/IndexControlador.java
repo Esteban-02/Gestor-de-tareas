@@ -44,8 +44,6 @@ public class IndexControlador implements Initializable {
     private TextField estatusTexto;
 
 
-
-
     // mostrar la informacion segun como se vaya recuperando de la base de datos, se hara automaticamente
     private final ObservableList<Tarea> tareaList = FXCollections.observableArrayList();
     private Integer idTareaInterno;
@@ -176,8 +174,11 @@ public class IndexControlador implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * Funcion que elimina una tarea de la base de datos, envia un objeto de tipo tarea al servicio de Spring y elimina desde la base de datos
+     */
     public void eliminarTarea(){
-        if (idTareaInterno==null){
+        if (idTareaInterno==null){          // Validacion del id para confirmacion de la existencia en seleccion en la tabla
             mostrarMensaje("Error", "No se ha seleccionado ninguna tarea");
             return;
         }
